@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RMA_1_mirza_sabanovic</string>
+    <string-array name="soapType">
+        <item>Random</item>
+         <item>Random</item>
+        <item>Random</item>
+    </string-array>
 </resources>

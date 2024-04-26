@@ -23,7 +23,6 @@ public class SplashScreen extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash_screen);
 
-        // Postavljanje odgode za prikazivanje MainActivity-a
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -31,6 +30,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 2000); // Odgodi 2 sekunde prije prebacivanja na MainActivity
+        }, 3000);
     }
 }
