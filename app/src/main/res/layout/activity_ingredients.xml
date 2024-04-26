@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ingredients">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="INGREDIENTS"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="What are your ingredient amounts by weight?"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:hint="Argan Oil"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal2"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:hint="Neem Oil"
+        android:layout_marginTop="10dp"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal3"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:hint="Castor Oil"
+        android:layout_marginTop="10dp"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal4"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Coconut Oil"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal3" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal5"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:hint="Coffee Butter"
+        android:layout_marginTop="10dp"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal4" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal7"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:hint="Lavender Butter"
+        android:layout_marginTop="10dp"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal5"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal5" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal8"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:hint="Yellow Beeswax"
+        android:layout_marginTop="10dp"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal7"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal7" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal9"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:hint="Avocado Oil"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal" />
+    <EditText
+        android:id="@+id/editTextNumberDecimal10"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:hint="Olive Oil"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal2" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal11"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:hint="Palm Oil"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal3" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal12"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:hint="Shea Butter"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal4" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal13"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:hint="Shea Oil"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal5" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal14"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:hint="Sunflower Oil"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal7" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal15"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:hint="Sweet Almond Oil"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberDecimal8" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="100dp"
+        android:text="Result"
+        android:background="@drawable/custom_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumberDecimal15"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumberDecimal8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
