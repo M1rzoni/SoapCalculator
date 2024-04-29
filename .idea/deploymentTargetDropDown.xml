@@ -21,6 +21,9 @@
           <timeTargetWasSelectedWithDropDown value="2024-04-26T17:42:13.205649934Z" />
         </State>
       </entry>
+      <entry key="Result">
+        <State />
+      </entry>
       <entry key="SplashScreen">
         <State />
       </entry>
@@ -28,7 +31,19 @@
         <State />
       </entry>
       <entry key="app">
-        <State />
+        <State>
+          <runningDeviceTargetsSelectedWithDialog>
+            <Target>
+              <type value="RUNNING_DEVICE_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="SERIAL_NUMBER" />
+                  <value value="6DEIOJWOON9XAMRO" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </runningDeviceTargetsSelectedWithDialog>
+        </State>
       </entry>
     </value>
   </component>
