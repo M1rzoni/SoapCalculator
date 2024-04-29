@@ -8,9 +8,13 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
 public class Ingredients extends AppCompatActivity {
 
     Button button;
+
+    int[] imageRes = {R.drawable.soap1, R.drawable.soap2};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,24 +23,15 @@ public class Ingredients extends AppCompatActivity {
 
         button = findViewById(R.id.button3);
 
-        EditText editText1 = findViewById(R.id.editTextNumberDecimal);
-        EditText editText2 = findViewById(R.id.editTextNumberDecimal2);
-
-        String hintEditText1 = getHintText(editText1);
-        String hintEditText2 = getHintText(editText2);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String arganOil = editText1.getText().toString();
-                String neemOil = editText2.getText().toString();
-
-                Intent intent = new Intent(Ingredients.this, Result.class);
-                intent.putExtra("arganOil", arganOil);
-                intent.putExtra("neemOil", neemOil);
-                intent.putExtra("hintEditText1", hintEditText1);
-                intent.putExtra("hintEditText2", hintEditText2);
+                Random random = new Random();
+                int randomIndex = random.nextInt(imageRes.length);
+                int randomImageResource = imageRes[randomIndex];
+                Intent intent = new Intent(Ingredients.this, CreateSplash.class);
+                intent.putExtra("imageRes", randomImageResource); // Dodajte ovo
                 startActivity(intent);
             }
         });

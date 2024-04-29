@@ -51,7 +51,7 @@ public class ChooseSoapType extends AppCompatActivity {
                 String chosenSoapWeight = spinner2.getSelectedItem().toString();
                 String chosenSuperfattingLevel = spinner3.getSelectedItem().toString();
 
-                Intent intent = new Intent(ChooseSoapType.this, Ingredients.class);
+                Intent intent = new Intent(ChooseSoapType.this, CreateSoap.class);
                 intent.putExtra("chosenSoapType", chosenSoapType);
                 intent.putExtra("chosenSoapWeight", chosenSoapWeight);
                 intent.putExtra("chosenSuperfattingLevel", chosenSuperfattingLevel);

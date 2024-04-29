@@ -5,6 +5,9 @@
       <entry key="ChooseSoapType">
         <State />
       </entry>
+      <entry key="CreateSoap">
+        <State />
+      </entry>
       <entry key="Ingredients">
         <State>
           <runningDeviceTargetSelectedWithDropDown>
@@ -27,11 +30,20 @@
       <entry key="SplashScreen">
         <State />
       </entry>
-      <entry key="SplashScreen (1)">
-        <State />
-      </entry>
       <entry key="app">
         <State>
+          <runningDeviceTargetSelectedWithDropDown>
+            <Target>
+              <type value="RUNNING_DEVICE_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="SERIAL_NUMBER" />
+                  <value value="6DEIOJWOON9XAMRO" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </runningDeviceTargetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-04-29T14:15:56.025488561Z" />
           <runningDeviceTargetsSelectedWithDialog>
             <Target>
               <type value="RUNNING_DEVICE_TARGET" />
