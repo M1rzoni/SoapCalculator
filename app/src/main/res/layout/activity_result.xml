@@ -31,6 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
@@ -49,7 +50,7 @@
             android:layout_marginTop="550dp"
             android:background="@drawable/custom_button"
             android:layout_marginLeft="13dp"
-            android:text="Oncues/Grams" />
+            android:text="Save to Database" />
         <Button
             android:id="@+id/button5"
             android:layout_width="174dp"
@@ -58,7 +59,7 @@
             android:layout_marginRight="13dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="550dp"
-            android:text="RESIZE BATCH" />
+            android:text="showDatabase" />
 
         <TextView
             android:id="@+id/textView11"
@@ -277,7 +278,6 @@
             android:textSize="16dp"
             android:text="Choose" />
 
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="36dp"
@@ -294,6 +294,7 @@
                 android:textColor="@color/white" />
 
         </FrameLayout>
+
 
         <TextView
             android:id="@+id/textView7"
@@ -356,7 +357,7 @@
                 android:layout_height="wrap_content"
                 android:text="AMOUNT" />
         </FrameLayout>
-
     </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,28 +1,73 @@
 package com.example.rma_1_mirza_sabanovic;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+
+import java.util.ArrayList;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Result extends AppCompatActivity {
 
     Button btn;
 
+    Button btn1;
+
+
+    TextView oils;
+
+    TextView value;
+
+    OilsDatabse oilsDB;
+
+    @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
         btn = findViewById(R.id.button4);
+        btn1 = findViewById(R.id.button5);
+        oils = findViewById(R.id.textView22);
+        value = findViewById(R.id.textView19);
+
+        oilsDB = Room.databaseBuilder(getApplicationContext(), OilsDatabse.class,
+                "oilsDB").build();
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Result.this, ChooseSoapType.class));
+                String oil = oils.getText().toString();
+                String values = value.getText().toString();
+
+                Oils p1 = new Oils(oil, values);
+                addOilInBackground(p1);
+
+            }
+        });
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Result.this, ShowDatabase.class));
             }
         });
 
@@ -54,7 +99,7 @@ public class Result extends AppCompatActivity {
         String totalTotal = String.format("%.2f", total);
 
         TextView textView6 = findViewById(R.id.textView6);
-        textView6.setText("a" + chosenSoapType + "nesto" + chosenSoapWeight  + "nesto"+ chosenSuperfattingLevel);
+        textView6.setText("a" + chosenSoapType + "nesto" + chosenSoapWeight + "nesto" + chosenSuperfattingLevel);
 
         TextView textView22 = findViewById(R.id.textView22);
         TextView textView23 = findViewById(R.id.textView23);
@@ -98,5 +143,28 @@ public class Result extends AppCompatActivity {
         }
 
     }
+
+    public void addOilInBackground(Oils oils) {
+
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+        Handler handler = new Handler(Looper.getMainLooper());
+
+        executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+
+                oilsDB.getOilsDAO().addOils(oils);
+
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(Result.this, "Added to database", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+    }
+
 }
 

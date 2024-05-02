@@ -18,12 +18,13 @@
         app:lottie_autoPlay="true"
         app:lottie_fileName="soap.json"
         app:lottie_loop="true" />
-
     <TextView
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_centerHorizontal="true"
-         android:layout_marginTop="40dp"
+         android:layout_marginTop="50dp"
+         android:textColor="@color/black"
+         android:textStyle="bold|italic"
          android:textSize="43sp"
          android:fontFamily="cursive"
          android:text="Soap Maker" />

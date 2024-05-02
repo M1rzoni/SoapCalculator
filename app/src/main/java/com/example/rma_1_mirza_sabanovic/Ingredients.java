@@ -31,7 +31,7 @@ public class Ingredients extends AppCompatActivity {
                 int randomIndex = random.nextInt(imageRes.length);
                 int randomImageResource = imageRes[randomIndex];
                 Intent intent = new Intent(Ingredients.this, CreateSplash.class);
-                intent.putExtra("imageRes", randomImageResource); // Dodajte ovo
+                intent.putExtra("imageRes", randomImageResource);
                 startActivity(intent);
             }
         });
